@@ -1,12 +1,12 @@
-# Olist E-Commerce Analytics — Power BI
+# Olist E-Commerce Analytics — SQL, Python & Power BI
 
 ## 📊 Project Overview
 
 An end-to-end e-commerce analytics project built using the Brazilian Olist e-commerce dataset.
 
-The project combines Python, MySQL, SQL, DAX, and Power BI to transform raw e-commerce data into an interactive business intelligence dashboard.
+The project combines Python, MySQL, SQL, DAX, and Power BI to transform raw e-commerce data into an interactive business intelligence solution.
 
-The analysis focuses on sales performance, customers, products, payments, delivery performance, sellers, and customer satisfaction.
+The analysis focuses on sales performance, customers, products, payments, delivery performance, sellers, and customer satisfaction through data analysis and interactive dashboards.
 
 ---
 
@@ -14,289 +14,258 @@ The analysis focuses on sales performance, customers, products, payments, delive
 
 - Analyze overall sales and order performance
 - Understand customer purchasing behavior
-- Identify high-performing product categories
-- Analyze payment methods and installment behavior
-- Evaluate delivery performance and delays
-- Compare seller performance
-- Analyze customer reviews and satisfaction
-- Build an interactive Power BI dashboard for business insights
+- Evaluate product and category performance
+- Analyze payment methods and payment values
+- Measure seller performance
+- Analyze delivery performance and delays
+- Understand customer satisfaction through review scores
+- Build an interactive Power BI dashboard
+- Generate meaningful business insights from the data
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-| Tool / Technology | Purpose |
-|---|---|
-| Power BI | Interactive dashboard and data visualization |
-| DAX | Measures and business calculations |
-| SQL / MySQL | Data analysis, validation, and querying |
-| Python | Data loading and database connectivity |
-| Pandas | Data handling and preprocessing |
-| SQLAlchemy | Python–MySQL connectivity |
-| PyMySQL | MySQL database driver |
-| GitHub | Project documentation and version control |
+- Python
+- MySQL
+- SQL
+- Power BI
+- DAX
+- Git
+- GitHub
+- Git LFS
 
 ---
 
-## 🔄 Project Workflow
+## 📂 Project Structure
 
-Olist CSV Dataset
-        ↓
-Python
-        ↓
-MySQL
-        ↓
-SQL
-        ↓
-Power BI
-        ↓
-Interactive Business Intelligence Dashboard
-
----
-
-## 📁 Dataset
-
-The project uses the Olist Brazilian e-commerce dataset containing information about:
-
-- Customers
-- Orders
-- Order Items
-- Payments
-- Reviews
-- Products
-- Sellers
-- Geolocation
-- Product Category Translation
-
-The raw CSV datasets are not included in this repository.
+```text
+Olist-Ecommerce-PowerBI/
+│
+├── Python_Files/
+│   └── Python analysis files
+│
+├── SQL/
+│   └── SQL scripts
+│
+├── SQL-BI Project.pbix
+│
+├── .gitattributes
+│
+└── README.md
+```
 
 ---
 
-## 🐍 Python Data Pipeline
+## 🐍 Python Analysis
 
-Python was used to load the Olist CSV datasets into MySQL and establish the database workflow.
+Python was used for exploratory data analysis, data understanding, cleaning, and visualization.
 
-The Python scripts include:
+### Key Activities
 
-- Loading CSV files into MySQL tables
-- Converting relevant date columns into datetime format
-- Creating the MySQL database connection
-- Testing the MySQL connection
-- Loading data efficiently in chunks
+- Data loading and inspection
+- Understanding dataset structure
+- Missing-value analysis
+- Data cleaning
+- Exploratory Data Analysis
+- Statistical analysis
+- Trend analysis
+- Data visualization
+- Generating analytical insights
 
-The GitHub versions of the scripts do not contain actual database credentials.
-
----
-
-## 🗄️ MySQL Database
-
-The Olist datasets were loaded into MySQL as separate tables.
-
-### Main Tables
-
-- customers
-- geolocation
-- order_items
-- order_payments
-- order_reviews
-- orders
-- products
-- sellers
-- category_translation
-
-MySQL was used as the analytical database layer before performing SQL analysis and connecting the results to the Power BI workflow.
+All Python files are available in the `Python_Files` folder.
 
 ---
 
-## 🔍 SQL Analysis
+## 🧮 SQL Analysis
 
-The SQL analysis covers multiple areas of the Olist business.
+SQL was used to perform structured analysis and answer important business questions.
 
-### Data Validation
+### SQL Concepts Used
 
-- Database and table inspection
-- Data integrity checks
-- Relationship and key validation
-- Duplicate and consistency checks
+- SELECT statements
+- WHERE filtering
+- GROUP BY
+- ORDER BY
+- Aggregate functions
+- INNER JOIN
+- LEFT JOIN
+- Multiple-table joins
+- CASE statements
+- Common Table Expressions (CTEs)
+- Business KPI calculations
 
-### Sales & Orders
+### Analysis Areas
 
-- Overall orders
-- Revenue analysis
-- Order status analysis
-- Average order value
-- Minimum and maximum order values
-- Order-value distribution
-- Median order value
+- Sales performance
+- Customer analysis
+- Seller analysis
+- Product analysis
+- Category performance
+- Payment analysis
+- Delivery analysis
+- Review analysis
 
-### Product Analysis
-
-- Product-category performance
-- Revenue by category
-- Category-level business performance
-
-### Customer Analysis
-
-- Customer purchasing behavior
-- Top customers
-- Repeat customers
-- Customer order frequency
-
-### Geographic Analysis
-
-- State-wise performance
-- Customer distribution
-- Geographic business patterns
-
-### Payment Analysis
-
-- Payment methods
-- Payment share
-- Installment behavior
-
-### Delivery Analysis
-
-- Delivery time
-- Late deliveries
-- Delivery performance
-- Estimated vs. actual delivery performance
-
-### Seller Analysis
-
-- Seller performance
-- Seller-level order and revenue analysis
-
-### Customer Satisfaction
-
-- Review score analysis
-- Review scores vs. delivery performance
+All SQL scripts are available in the `SQL` folder.
 
 ---
 
 ## 📊 Power BI Dashboard
 
-The Power BI dashboard converts the analyzed data into an interactive business intelligence report.
+Power BI was used to create an interactive business intelligence dashboard from the analyzed Olist data.
 
-The dashboard provides analysis across key business areas including:
+### Dashboard Analysis
 
-- Sales performance
-- Orders
-- Customers
-- Products and categories
-- Payments
+- Total sales
+- Total orders
+- Customer analysis
+- Product analysis
+- Category performance
+- Seller performance
+- Payment analysis
 - Delivery performance
-- Sellers
-- Customer reviews and satisfaction
+- Review scores
+- Customer satisfaction
+- Geographic analysis
 
-Interactive filters and visualizations allow users to explore the data across different business dimensions.
+### Power BI Features Used
+
+- Data modeling
+- Relationships
+- DAX measures
+- Calculated columns
+- KPI cards
+- Slicers
+- Charts and visualizations
+- Interactive filtering
+- Dashboard design
+
+The complete Power BI report is available as:
+
+`SQL-BI Project.pbix`
+
+The `.pbix` file can be opened using Microsoft Power BI Desktop.
 
 ---
 
-## 📈 Dashboard Pages
+## 🚚 Delivery Performance
 
-The Power BI report is organized into three analytical pages covering the major areas of the Olist business.
+The project analyzes delivery performance to understand:
 
-### Page 1 — Sales & Customer Analysis
+- Estimated vs actual delivery
+- Delivery delays
+- Delivery time
+- Order processing performance
+- Impact of delivery performance on customer satisfaction
 
-Focuses on overall business performance, sales, orders, customers, and customer purchasing behavior.
+---
 
-### Page 2 — Product & Payment Analysis
+## ⭐ Customer Satisfaction
 
-Focuses on product categories, revenue performance, payment methods, and installment behavior.
+Customer review scores were analyzed to understand customer experience.
 
-### Page 3 — Delivery & Seller Analysis
+The analysis examines:
 
-Focuses on delivery performance, late deliveries, seller performance, and customer review patterns.
+- Review score distribution
+- Relationship between delivery performance and reviews
+- Product-related customer satisfaction
+- Overall customer experience
+
+---
+
+## 🏪 Seller Performance
+
+Seller-level analysis was performed to identify:
+
+- Top-performing sellers
+- Sales contribution
+- Order contribution
+- Seller distribution
+- Seller performance across regions
+
+---
+
+## 📦 Product & Category Analysis
+
+Product and category performance was analyzed to identify:
+
+- Best-performing categories
+- Sales contribution by category
+- Order volume
+- Product performance
+- Customer reviews by category
+
+---
+
+## 💳 Payment Analysis
+
+Payment data was analyzed to understand:
+
+- Payment methods
+- Payment value
+- Number of payment installments
+- Payment behavior
+- Contribution of different payment methods
 
 ---
 
 ## 💡 Key Business Questions
 
-The project helps answer questions such as:
+The project aims to answer questions such as:
 
-1. How are sales and orders performing?
-2. Which product categories generate the most revenue?
-3. Which states contribute most to the business?
-4. Who are the highest-value customers?
-5. How frequently do customers make repeat purchases?
-6. Which payment methods are most commonly used?
-7. How does installment behavior vary across customers?
-8. How well are sellers performing?
-9. How frequently are orders delivered late?
-10. Is there a relationship between delivery performance and customer reviews?
+1. How are sales and orders performing over time?
+2. Which product categories generate the highest sales?
+3. Which sellers contribute the most to overall sales?
+4. Which payment methods are most commonly used?
+5. How does delivery performance affect customer satisfaction?
+6. Which regions generate the most orders and sales?
+7. What factors are associated with higher review scores?
+8. Where are the major opportunities for improving e-commerce performance?
 
 ---
 
-## 📂 Repository Structure
+## 🔄 End-to-End Workflow
 
-Olist-Ecommerce-PowerBI/
-│
-├── PowerBI/
-│   └── Olist_Ecommerce_Dashboard.pbix
-│
-├── SQL/
-│   └── olist_analysis.sql
-│
-├── Python/
-│   ├── 01_load_data_to_mysql.py
-│   ├── 02_test_mysql_connection.py
-│   └── requirements.txt
-│
-├── Screenshots/
-│   ├── Page_1.png
-│   ├── Page_2.png
-│   └── Page_3.png
-│
-├── Data/
-│   └── README.md
-│
-└── README.md
+```text
+Raw Olist Dataset
+        ↓
+Data Exploration
+        ↓
+Data Cleaning
+        ↓
+Python Analysis
+        ↓
+SQL Analysis
+        ↓
+Data Modeling
+        ↓
+DAX Calculations
+        ↓
+Power BI Dashboard
+        ↓
+Business Insights
+```
 
 ---
 
-## 🔐 Security
+## 📈 Project Outcome
 
-Database credentials are not included in this repository.
+This project demonstrates an end-to-end data analytics and business intelligence workflow.
 
-The Python scripts use placeholder database configuration for demonstration purposes.
-
-For local execution, users should provide their own MySQL credentials.
+It combines **Python, MySQL, SQL, DAX, and Power BI** to transform raw e-commerce data into meaningful business insights and an interactive dashboard.
 
 ---
 
-## 📌 Project Highlights
+## 🎯 Skills Demonstrated
 
-This project demonstrates an end-to-end Business Intelligence workflow:
-
-Data Ingestion → Database Management → SQL Analysis → Data Modeling → DAX → Visualization → Business Insights
-
-It showcases practical skills in:
-
-SQL • Python • MySQL • Power BI • DAX • Data Analysis • Business Intelligence
+**Python | MySQL | SQL | Power BI | DAX | Data Analysis | EDA | Data Cleaning | Data Visualization | Business Intelligence | Git | GitHub**
 
 ---
 
-## 🚀 Skills Demonstrated
+## 👨‍💻 Author
 
-- Data Cleaning & Preparation
-- Data Loading
-- Relational Database Management
-- SQL Querying
-- Exploratory Data Analysis
-- Business Intelligence
-- Data Visualization
-- DAX Measures
-- Customer Analytics
-- Sales Analytics
-- Delivery Analytics
-- Seller Analytics
-- Dashboard Design
-- Business Insight Generation
+**Harshit Narwat**
 
----
+Aspiring Data Analyst
 
-## 👤 Author
-
-Harshit Narwat
-
-GitHub: @harshitnarwat
+**SQL | Python | Power BI | Financial & Business Analytics**
